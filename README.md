@@ -80,8 +80,8 @@ Coming soon…
 | 優先度 | 技術要素 | 目的 |
 | :--- | :--- | :--- |
 | **最優先（MVP）**| **CRUD操作・DB操作** | 投稿、ユーザー認証・ログインなどのデータ永続化に必須 |
-| **最優先（MVP）**| **ログインスタンプ + カレンダー** | 習慣化の核機能。実装が比較的容易 |
 | **最優先（MVP）**| **歩数記録・表示** | メイン機能 |
+| **最優先（MVP）**| **ログインスタンプ + カレンダー** | 習慣化の核機能。実装が比較的容易 |
 | **最優先（MVP）**| **リアクション機能** | コミュニティの基盤。多様な反応で継続モチベーション向上 |
 | **最優先（MVP）**| **非同期通信** | 投稿データの送受信、外部APIデータ取得時のUX向上 |
 | **最優先（MVP）**| **外部API連携（天気予報）** | ユーザーが散歩計画を立てるための実用性 |
@@ -92,6 +92,8 @@ Coming soon…
 | **低優先** | **グラフ機能** | ユーザー体験を向上させるための可視化 |
 | **低優先** | **Googleログイン** | ログインの手間を減らす |
 | **低優先** | **ログインスタンプ補填** | 雨などで連続ログインが止まらないように運動ガチャでスタンプを補填 |
+| **低優先** | **フォロー機能** | 継続的なコミュニティ形成。本来は高優先度だがユーザーが少ないうちは低優先度|
+| **ボツ案** | **アチーブメント機能** | 目標達成の可視化 一つ一つリッチなデザインを考える時間がないためボツ |
 
 ## 使用する技術スタック（仮）
 
@@ -113,8 +115,8 @@ Coming soon…
 * **API連携:** net-http（Rails標準）or OpenWeatherMap API（天気予報）
 
 ### **フロントエンド**
-* **スタイリング:**
-* **JavaScript:**
+* **スタイリング:** Tailwind CSS
+* **JavaScript:** Stimulus
 * **非同期通信:** Turbo（Rails標準）
 
 ### **インフラ・その他**
@@ -123,17 +125,18 @@ Coming soon…
 * **バージョン管理:** Git/GitHub
 
 
-## 画面遷移図
+## 画面遷移図(暫定版)
 ### PC版
 Figma：(https://www.figma.com/board/U1dqKDAMsI9lNTAEYcGTOV/FigJam-basics?node-id=0-1&p=f&t=ZDUfKhhX3F41N6dn-0)
 [![Image from Gyazo](https://i.gyazo.com/46f161ccd35179b545c2b700eeb17617.png)](https://gyazo.com/46f161ccd35179b545c2b700eeb17617)
+
 ### スマホ版
 Coming soon…
 
 
-## ER図(製作の途中経過)
+## ER図(暫定版)
 dbdiagram.io：(https://dbdiagram.io/d/68f9ef31357668b7323f223e)
-[![Image from Gyazo](https://i.gyazo.com/2298e5f3e798b6f5b128acc89b4ab6df.png)](https://gyazo.com/2298e5f3e798b6f5b128acc89b4ab6df)
+[![Image from Gyazo](https://i.gyazo.com/c20dc36a70bfa9218cfd56b62ab7c0dd.png)](https://gyazo.com/c20dc36a70bfa9218cfd56b62ab7c0dd)
 
 ### 設計のポイント
 - **ユーザー情報の分離**: 認証情報、プロフィール、設定を実務に近い形で分離し、パフォーマンスを最適化
@@ -149,4 +152,4 @@ dbdiagram.io：(https://dbdiagram.io/d/68f9ef31357668b7323f223e)
 Renderの使用を決定
 
 ## 📝 変更履歴
-v1.3　ER図の作成と仕様変更()
+v1.3　ER図の作成と仕様変更
